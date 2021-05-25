@@ -14,6 +14,14 @@ configurations.all {
 }
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('autosh.jks')
+            storePassword '1qaz2wsx'
+            keyAlias 'autosh'
+            keyPassword '1qaz2wsx'
+        }
+    }
     compileSdkVersion versions.compile
     buildToolsVersion versions.buildTool
     defaultConfig {
@@ -24,6 +32,7 @@ android {
         versionName versions.appVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        signingConfig signingConfigs.release
     }
     buildTypes {
         debug {
