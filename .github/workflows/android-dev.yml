@@ -19,10 +19,10 @@ jobs:
           java-version: 1.8
 
       - name: Build with Gradle
-        run: chmod 777 ./gradlew && ./gradlew :app:assembleRelease && find app/build/outputs
+        run: chmod 777 ./gradlew && ./gradlew :app:assembleDebug && find app/build/outputs
 
       - name: Upload apk
         uses: actions/upload-artifact@v1
         with:
           name: auto.js.dev.[4.1.1 Alpha2].apk
-          path: app/build/outputs/apk/common/release/app-common-armeabi-v7a-release.apk
+          path: app/build/outputs/apk/common/debug/app-common-armeabi-v7a-debug.apk
