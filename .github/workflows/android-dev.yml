@@ -25,4 +25,4 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: auto.js.dev.[4.1.1 Alpha2].apk
-          path: app/build/outputs/apk/common/release/app-common-armeabi-v7a-release-signed.apk
+          path: app/build/outputs/apk/common/release/app-common-armeabi-v7a-release.apk
